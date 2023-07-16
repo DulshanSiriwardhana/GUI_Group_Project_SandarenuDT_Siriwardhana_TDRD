@@ -1,0 +1,91 @@
+﻿<Window x:Class="Desktop01.AddUserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Desktop01"
+        mc:Ignorable="d"
+        Title="{Binding Title,UpdateSourceTrigger=PropertyChanged}" Height="450" Width="800"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        Background="Transparent"
+        >
+    <Window.DataContext>
+        <local:AddUserVM/>
+    </Window.DataContext>
+
+    <Grid>
+        <Border BorderBrush="Black" Height="430" Margin="240,0,0,0"  Width="550" CornerRadius="20,20,20,20"/>
+        <Border CornerRadius="20 20 20 20">
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0 0" EndPoint="1 1">
+                    <GradientStop Color="Aquamarine"  Offset="0.5"/>
+                    <GradientStop Color="CadetBlue"  Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <Border BorderBrush="Black"  BorderThickness="2" Background="Black"  Width="150" Height="50" CornerRadius="20" Margin="262,125,388,275">
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="5" Color="Gray"/>
+            </Border.Effect>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="2" Background="Black" Width="150" Height="50" CornerRadius="20" Margin="262,195,388,205">
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="5" Color="Gray"/>
+            </Border.Effect>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="2" Background="Black" Width="150" Height="50" CornerRadius="20" Margin="262,255,388,145">
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="5" Color="Gray"/>
+            </Border.Effect>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="2" Background="Black" Width="150" Height="50" CornerRadius="20" Margin="262,314,388,86">
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="5" Color="Gray"/>
+            </Border.Effect>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="2" Background="Black" Width="150" Height="50" CornerRadius="20" Margin="262,372,388,28">
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="5" Color="Gray"/>
+            </Border.Effect>
+        </Border>
+
+        <TextBlock Text="{Binding Title,UpdateSourceTrigger=PropertyChanged}" Margin="400,42,0,0"  FontSize="25" FontWeight="Bold" HorizontalAlignment="Left" Width="152" VerticalAlignment="Top" Foreground="White"/>
+        <TextBlock Text="First Name" Margin="287,140,376,0" FontSize="15" FontWeight="Bold" VerticalAlignment="Top" Foreground="White"/>
+        <TextBlock Text="Last Name" Margin="287,210,376,0" FontSize="15" FontWeight="Bold" VerticalAlignment="Top" Foreground="White"/>
+        <TextBlock Text="Age" Margin="287,270,376,0" FontSize="15" FontWeight="Bold" VerticalAlignment="Top" Foreground="White"/>
+        <TextBlock Text="Date of Birth" Margin="287,330,376,0" FontSize="15" FontWeight="Bold" VerticalAlignment="Top" Foreground="White"/>
+        <TextBlock Text="GPA" Margin="287,387,376,0" FontSize="15" FontWeight="Bold" VerticalAlignment="Top" Foreground="White"/>
+
+        <TextBox Text="{Binding Firstname, UpdateSourceTrigger=PropertyChanged}" Margin="433,125,29,275" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Style="{StaticResource TextBoxDesign}" FontSize="15" FontWeight="Bold" SelectionOpacity="1"/>
+        <TextBox Text="{Binding Lastname, UpdateSourceTrigger=PropertyChanged}" Margin="433,195,29,205" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Style="{StaticResource TextBoxDesign}" FontSize="15" FontWeight="Bold" SelectionOpacity="1"/>
+        <TextBox Text="{Binding Age, UpdateSourceTrigger=PropertyChanged}" Margin="433,255,29,145" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Style="{StaticResource TextBoxDesign}" FontSize="15" FontWeight="Bold" SelectionOpacity="1"/>
+        <TextBox Text="{Binding Dateofbirth, UpdateSourceTrigger=PropertyChanged}" Margin="433,315,29,85" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Style="{StaticResource TextBoxDesign}" FontSize="15" FontWeight="Bold" SelectionOpacity="1"/>
+        <TextBox Text="{Binding Gpa, UpdateSourceTrigger=PropertyChanged}" Margin="433,375,29,25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Style="{StaticResource TextBoxDesign}" FontSize="15" FontWeight="Bold" SelectionOpacity="1"/>
+
+        <Button Content="insert DP" Command="{Binding UploadPhotoCommand}" Margin="44,245,604,154" Style="{StaticResource ButtonDesign}" Background="CornflowerBlue"  FontSize="15">
+            <Button.Effect>
+                <DropShadowEffect ShadowDepth="5" Color="Black"/>
+            </Button.Effect>
+        </Button>
+        <Button Content="Save" Command="{Binding SaveCommand}" Margin="44,308,604,91" Style="{StaticResource ButtonDesign}" Background="CornflowerBlue"  FontSize="15">
+            <Button.Effect>
+                <DropShadowEffect ShadowDepth="5" Color="Black"/>
+            </Button.Effect>
+        </Button>
+        <Button Content="Back" Command="{Binding BackCommand}" Margin="44,371,604,28" Style="{StaticResource ButtonDesign}" Background="CornflowerBlue" FontSize="15">
+            <Button.Effect>
+                <DropShadowEffect ShadowDepth="5" Color="Black"/>
+            </Button.Effect>
+        </Button>
+
+        <Border Background="AliceBlue" BorderThickness="3" BorderBrush="Black" CornerRadius="100" Width="200" Height="200" Margin="20,25,580,225"/>
+        <Image Margin="20,30,580,230" Source="{Binding SelectedImage,UpdateSourceTrigger=PropertyChanged}">
+            <Image.Effect>
+                <DropShadowEffect ShadowDepth="20" Color="Black"/>
+            </Image.Effect>
+        </Image>
+
+    </Grid>
+</Window>

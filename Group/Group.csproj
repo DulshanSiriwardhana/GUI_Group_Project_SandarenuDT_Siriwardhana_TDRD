@@ -1,0 +1,66 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>STDManager</AssemblyName>
+    <RootNamespace>STDManager</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="images\bg.png" />
+    <None Remove="images\dp.png" />
+    <None Remove="images\Icon\blue.ico" />
+    <None Remove="images\Icon\camera.ico" />
+    <None Remove="images\Icon\LOGO_OF_RUHUNA.png" />
+    <None Remove="images\Icon\user.ico" />
+    <None Remove="images\LOGO_OF_RUHUNA.png" />
+    <None Remove="images\pp.jpeg" />
+    <None Remove="images\pp.png" />
+    <None Remove="images\UOR.png" />
+    <None Remove="images\UORLOGO.jpeg" />
+    <None Remove="Model\Images\1.png" />
+    <None Remove="Model\Images\2.png" />
+    <None Remove="Model\Images\3.png" />
+    <None Remove="Model\Images\4.png" />
+    <None Remove="Model\Images\NoPic.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\Icon\camera.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\bg.png" />
+    <Resource Include="images\dp.png" />
+    <Resource Include="images\Icon\blue.ico" />
+    <Resource Include="images\Icon\LOGO_OF_RUHUNA.png" />
+    <Resource Include="images\Icon\user.ico" />
+    <Resource Include="images\LOGO_OF_RUHUNA.png" />
+    <Resource Include="images\pp.jpeg" />
+    <Resource Include="images\pp.png" />
+    <Resource Include="images\UOR.png" />
+    <Resource Include="images\UORLOGO.jpeg" />
+    <Resource Include="Model\Images\1.png" />
+    <Resource Include="Model\Images\2.png" />
+    <Resource Include="Model\Images\3.png" />
+    <Resource Include="Model\Images\4.png" />
+    <Resource Include="Model\Images\NoPic.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DataBase\" />
+  </ItemGroup>
+
+</Project>
